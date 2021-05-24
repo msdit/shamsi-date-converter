@@ -1,10 +1,19 @@
 {
-  "name": "shamsi-date",
+  "name": "shamsi-date-converter",
   "version": "1.0.0",
   "description": "A minimal Jalali to Gregorian and Gregorian to Jalali converter",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -30,5 +39,20 @@
   "bugs": {
     "url": "https://github.com/msdit/shamsi-date/issues"
   },
-  "homepage": "https://github.com/msdit/shamsi-date"
+  "homepage": "https://github.com/msdit/shamsi-date",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^26.6.3",
+    "prettier": "^2.3.0",
+    "ts-jest": "^26.5.6",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "shamsi": "^1.0.1"
+  },
+  "files": [
+    "lib/**/*"
+  ]
 }
