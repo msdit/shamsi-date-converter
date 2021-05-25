@@ -51,6 +51,6 @@
     "lib/**/*"
   ],
   "dependencies": {
-    "shamsi": "^1.1.4"
+    "shamsi": "^1.1.6"
   }
 }
