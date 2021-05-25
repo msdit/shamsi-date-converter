@@ -1,6 +1,6 @@
 {
   "name": "shamsi-date-converter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A minimal Jalali to Gregorian and Gregorian to Jalali converter",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
