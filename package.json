@@ -1,6 +1,6 @@
 {
   "name": "shamsi-date-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal Jalali to Gregorian and Gregorian to Jalali converter",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,11 +9,9 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepublishOnly": "npm test && npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -49,10 +47,10 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.2.4"
   },
-  "dependencies": {
-    "shamsi": "^1.0.1"
-  },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "shamsi": "^1.1.4"
+  }
 }
